@@ -68,18 +68,14 @@
 @media (max-width: 768px) {
     .top-menu ul {
         align-items: flex-start; /* Align items to the left */
+        padding: 0; /* Ensure there's no extra padding applied to the list */
     }
 
     .top-menu li {
-        margin: 10px 0; /* Increase spacing between items on mobile */
+        margin: 10px 0; /* Vertical spacing between items */
     }
 
     .top-menu .logo {
         width: 40px; /* Resize logo for mobile */
-    }
-
-    .top-menu li:last-child {
-        display: flex;
-        align-items: center;
     }
 }
