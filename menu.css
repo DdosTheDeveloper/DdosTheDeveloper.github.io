@@ -71,10 +71,15 @@
     }
 
     .top-menu li {
-        margin: 6px 0; /* Increase spacing between items on mobile */
+        margin: 10px 0; /* Increase spacing between items on mobile */
     }
 
     .top-menu .logo {
         width: 40px; /* Resize logo for mobile */
+    }
+
+    .top-menu li:last-child {
+        display: flex;
+        align-items: center;
     }
 }
