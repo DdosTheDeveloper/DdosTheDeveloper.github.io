@@ -67,7 +67,6 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .top-menu ul {
-        flex-direction: column; /* Stack the menu items vertically on smaller screens */
         align-items: flex-start; /* Align items to the left */
     }
 
