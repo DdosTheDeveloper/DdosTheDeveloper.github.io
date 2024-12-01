@@ -1,4 +1,4 @@
-/* General Menu Styling */
+/* General Menu */
 .top-menu {
     position: relative;
     top: 0;
@@ -6,73 +6,73 @@
     width: 100%;
     background-color: #F1EFEF;
     padding: 10px 0;
-    z-index: 1000; /* Ensure the menu stays on top of other content */
+    z-index: 1000;
 }
 
-/* Menu Container */
+/* Menu Items */
 .top-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: flex-start; /* Align items horizontally */
-    align-items: center; /* Vertically align items */
-    height: 100%; /* Ensure the items fill the height of the menu */
+    display: flex; /* Items in a row */
+    justify-content: flex-start; 
+    align-items: center; 
+    height: 100%;
 }
 
-/* Menu List Items */
+/* Menu list items */
 .top-menu li {
-    margin: 0 15px; /* Adjust the spacing between menu items */
+    margin: 0 15px; /* Horizontal margin for spacing between items */
     display: flex;
-    align-items: center; /* Center items vertically */
+    align-items: center;
 }
 
-/* Styling for the menu links */
+/* Link styles */
 .top-menu a {
     text-decoration: none;
     color: #1E1E1E;
     font-size: 18px;
     display: flex;
-    align-items: center; /* Align logo and text inline */
+    align-items: center;
 }
 
-.top-menu a:hover {
-    color: #595959; /* Change color on hover */
-}
-
-/* Style for the logo and text inside the top-menu */
-.top-menu .logo-text-wrapper {
-    display: flex;
-    align-items: center; /* Align logo and text vertically */
-}
-
-.top-menu .logo {
-    width: 50px; /* Adjust the size of the logo */
-    height: auto;
-    margin-right: 10px; /* Space between logo and text */
-}
-
-.top-menu .logo-text {
-    font-size: 18px; /* Ensure text size matches the menu links */
-    font-weight: bold;
-    color: #1E1E1E; /* Keep color consistent with the links */
-}
-
-/* Last list item alignment */
 .top-menu li:last-child {
-    margin-left: auto; /* Push the last item to the right */
+    margin-left: auto;
 }
 
+/* Logo and text wrapper */
+.logo-text-wrapper {
+    display: flex;
+    align-items: center;
+}
 
-/* Mobile Responsiveness */
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+
+/* Hover effect */
+.top-menu a:hover {
+    color: #595959;
+}
+
+/* Mobile Specific Styles */
 @media (max-width: 768px) {
     .top-menu ul {
-        align-items: flex-start; /* Align items to the left */
-        padding: 0; /* Ensure there's no extra padding applied to the list */
+        flex-direction: row; /* Ensure items are in a row on mobile */
+        justify-content: space-between; /* Spread out items horizontally */
+        padding: 0; /* Remove any additional padding */
     }
 
     .top-menu li {
-        margin: 10px 0; /* Vertical spacing between items */
+        margin: 0 10px; /* Adjust the margin for spacing between items */
     }
 
     .top-menu .logo {
