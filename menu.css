@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #F1EFEF ;
+    background-color: #F1EFEF;
     padding: 10px 0;
     z-index: 1000; /* Ensure the menu stays on top of other content */
 }
@@ -19,9 +19,11 @@
     height: 100%; /* Ensure the items fill the height of the menu */
 }
 
-/* Menu list items (remove unnecessary margin) */
+/* Menu list items */
 .top-menu li {
     margin: 0 15px; /* You can adjust the margin between the items here */
+    display: flex; /* Ensure the list items align properly */
+    align-items: center; /* Vertically align contents inside each item */
 }
 
 /* Link styles */
@@ -29,16 +31,32 @@
     text-decoration: none;
     color: #1E1E1E;
     font-size: 18px;
+    display: flex; /* Align logo and text inline */
+    align-items: center; /* Center logo and text vertically */
 }
 
-/* Hover effect for links */
-.top-menu a:hover {
-    color: #595959;
+.top-menu li:last-child {
+    margin-left: auto;
 }
 
-/* Logo */
+/* Logo and text wrapper */
+.logo-text-wrapper {
+    display: flex;
+    align-items: center; /* Center text with the logo */
+}
+
 .logo {
     width: 50px; /* Adjust the size of the logo */
     height: auto;
-    margin-left: 10px;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 18px; /* Match font size to the menu links */
+    font-weight: bold;
+    color: #1E1E1E; /* Ensure consistent color */
+}
+
+.top-menu a:hover {
+    color: #595959; /* Adjust hover effect */
 }

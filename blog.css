@@ -1,0 +1,44 @@
+/* Базове оформлення для блогу */
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Простір між статтями */
+    margin: 20px; /* Відступи навколо блоку блогу */
+    padding: 10px;
+}
+
+/* Контури для кожної статті */
+.post-preview {
+    border: 2px solid #D0D0D0; /* Колір та товщина контуру */
+    border-radius: 8px; /* Закруглення кутів */
+    padding: 15px; /* Відступи всередині статті */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Ефекти при наведенні */
+    background-color: #F1EFEF ; /* Фон для кожної статті */
+}
+
+/* Заголовки статей */
+.post-preview h2 {
+    font-size: 1.5rem;
+    color: #333; /* Темний колір тексту */
+    margin-bottom: 10px; /* Відступ після заголовку */
+}
+
+/* Текст попереднього перегляду */
+.post-preview p {
+    font-size: 1rem;
+    color: #A6A6A6; /* Сірий колір тексту */
+    margin: 0;
+}
+
+/* Ефекти при наведенні на статтю */
+.post-preview:hover {
+    transform: translateY(-5px); /* Легке підняття елемента */
+    box-shadow: 0 4px 10px #1E1E1E(0, 0, 0, 0.1); /* Тінь при наведенні */
+    border-color:  #595959; /* Зміна кольору контуру */
+}
+
+/* Для всього блогу */
+.blog-posts {
+    max-width: 800px; /* Обмеження ширини блоку */
+    margin: 0 auto; /* Центрування блоку */
+}
