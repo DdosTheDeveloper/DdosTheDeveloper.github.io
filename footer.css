@@ -1,0 +1,52 @@
+.footer {
+    background-color: #595959;
+    color: #D0D0D0;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space out the child elements */
+    align-items: flex-start; /* Align items at the top (default is stretch) */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-contact,
+.footer-social {
+    flex: 1; /* Equal flex-basis for both sections */
+    padding: 0 20px; /* Add padding for spacing between sections */
+}
+
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p,
+.footer-social a {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #A6A6A6;
+    display: block; /* Ensures links stack in a column */
+}
+
+.footer-social a:hover {
+    color: #F1EFEF;
+}
+
+.footer-social p {
+    color: #A6A6A6
+}
