@@ -35,9 +35,7 @@
     align-items: center; /* Center logo and text vertically */
 }
 
-.top-menu li:last-child {
-    margin-left: auto; /* This will push the last menu item (Blog) to the right */
-}
+
 
 /* Logo and text wrapper */
 .logo-text-wrapper {
