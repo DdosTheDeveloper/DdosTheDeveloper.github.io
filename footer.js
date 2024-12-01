@@ -6,7 +6,7 @@ export function createFooter() {
         <footer class="footer">
           <div class="footer-content">
             <div class="footer-logo">
-              <img src="Strong-Media-logo-v5.png" alt="Strong Media Logo">
+              <img src="Strong-Media-logo-v7.jpeg" alt="Strong Media Logo">
             </div>
             <div class="footer-contact">
               <h3>Контакти</h3>
