@@ -1,4 +1,4 @@
-.top-menu {
+top-menu {
     position: relative;
     top: 0;
     left: 0;
@@ -35,7 +35,9 @@
     align-items: center; /* Center logo and text vertically */
 }
 
-
+.top-menu li:last-child {
+    margin-left: auto;
+}
 
 /* Logo and text wrapper */
 .logo-text-wrapper {

@@ -22,42 +22,26 @@ const articles = {
 // Головна функція створення меню
 export function createTopMenu() {
   document.addEventListener("DOMContentLoaded", function () {
-    // Перевіряємо, чи меню вже існує, щоб не додавати його повторно
-    if (!document.querySelector('.top-menu')) {
-      document.body.insertAdjacentHTML(
-        "afterbegin",
-        `
-        <div class="top-menu">
-          <div class="menu-toggle" id="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-          <ul id="menu-list">
-            <li class="logo-item">
-              <a href="#" data-page="home">
-                <div class="logo-text-wrapper">
-                  <img src="Strong-Media-logo-v4.png" class="logo" alt="Home">
-                  <span class="logo-text">Strong Media</span>
-                </div>
-              </a>
-            </li>
-            <li><a href="#" data-page="about-us">Про нас</a></li>
-            <li><a href="#" data-page="contact">Контакти</a></li>
-            <li><a href="#" data-page="blog">Блог</a></li>
-          </ul>
-        </div>
-        `
-      );
-    }
-
-    // Обробник для відкриття/закриття меню
-    const menuToggle = document.getElementById("menu-toggle");
-    const topMenu = document.querySelector(".top-menu");
-
-    menuToggle.addEventListener("click", function () {
-      topMenu.classList.toggle("active");
-    });
+    document.body.insertAdjacentHTML(
+      "afterbegin",
+      `
+      <div class="top-menu">
+        <ul>
+          <li class="logo-item">
+            <a href="#" data-page="home">
+              <div class="logo-text-wrapper">
+                <img src="Strong-Media-logo-v4.png" class="logo" alt="Home">
+                <span class="logo-text">Strong Media</span>
+              </div>
+            </a>
+          </li>
+          <li><a href="#" data-page="about-us">Про нас</a></li>
+          <li><a href="#" data-page="contact">Контакти</a></li>
+          <li><a href="#" data-page="blog">Блог</a></li>
+        </ul>
+      </div>
+      `
+    );
 
     const menuLinks = document.querySelectorAll(".top-menu a");
     menuLinks.forEach((link) => {
