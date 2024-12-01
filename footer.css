@@ -1,12 +1,13 @@
 .footer {
     background-color: #595959;
     color: #D0D0D0;
-    padding: 20px 0;
+    padding: 10px 0;
     margin-top: 10px;
 }
 
 .footer-content {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     justify-content: space-between; /* Space out the child elements */
     align-items: flex-start; /* Align items at the top (default is stretch) */
     max-width: 1200px;
@@ -17,12 +18,15 @@
 .footer-logo img {
     width: 100px;
     height: auto;
+    margin-bottom: 10px; /* Add space below the logo */
 }
 
 .footer-contact,
 .footer-social {
     flex: 1; /* Equal flex-basis for both sections */
     padding: 0 20px; /* Add padding for spacing between sections */
+    min-width: 250px; /* Ensure a minimum width for sections */
+    box-sizing: border-box; /* Include padding in the width */
 }
 
 .footer-contact h3,
@@ -48,5 +52,34 @@
 }
 
 .footer-social p {
-    color: #A6A6A6
+    color: #A6A6A6;
+}
+
+/* Responsive Design for smaller devices */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center-align content */
+    }
+
+    .footer-contact,
+    .footer-social {
+        text-align: center; /* Center text in each section */
+        padding: 10px 0; /* Add padding between stacked sections */
+    }
+
+    .footer-logo img {
+        margin-bottom: 10px; /* Reduce space below the logo */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        width: 80px; /* Scale logo for smaller screens */
+    }
+
+    .footer-contact p,
+    .footer-social a {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
 }
