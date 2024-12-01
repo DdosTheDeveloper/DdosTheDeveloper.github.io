@@ -1,4 +1,3 @@
-/* Загальні стилі для меню */
 .top-menu {
     position: relative;
     top: 0;
@@ -6,121 +5,58 @@
     width: 100%;
     background-color: #F1EFEF;
     padding: 10px 0;
-    z-index: 1000; /* Меню залишається на передньому плані */
+    z-index: 1000; /* Ensure the menu stays on top of other content */
 }
 
-/* Стилі для елементів меню */
+/* Menu Items */
 .top-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between; /* Менше місця між елементами */
-    align-items: center;
-    flex-wrap: wrap; /* Дозволяє елементам переноситися на наступний рядок на маленьких екранах */
+    justify-content: flex-start; /* Center items horizontally */
+    align-items: center; /* Vertically align items if necessary */
+    height: 100%; /* Ensure the items fill the height of the menu */
 }
 
-/* Стилі для кожного елементу меню */
+/* Menu list items */
 .top-menu li {
-    margin: 0 15px; /* Відстань між елементами */
-    display: flex;
-    align-items: center; /* Вирівнюємо елементи по вертикалі */
+    margin: 0 15px; /* You can adjust the margin between the items here */
+    display: flex; /* Ensure the list items align properly */
+    align-items: center; /* Vertically align contents inside each item */
 }
 
-/* Стилі для посилань в меню */
+/* Link styles */
 .top-menu a {
     text-decoration: none;
     color: #1E1E1E;
-    font-size: 18px; /* Розмір шрифтів */
-    display: flex;
-    align-items: center; /* Вирівнюємо текст і логотип */
+    font-size: 18px;
+    display: flex; /* Align logo and text inline */
+    align-items: center; /* Center logo and text vertically */
 }
 
-/* Стилі для логотипу */
+.top-menu li:last-child {
+    margin-left: auto; /* This will push the last menu item (Blog) to the right */
+}
+
+/* Logo and text wrapper */
 .logo-text-wrapper {
     display: flex;
-    align-items: center;
+    align-items: center; /* Center text with the logo */
 }
 
 .logo {
-    width: 50px;
+    width: 50px; /* Adjust the size of the logo */
     height: auto;
-    margin-right: 10px;
+    margin-right: 10px; /* Space between logo and text */
 }
 
 .logo-text {
-    font-size: 18px;
+    font-size: 18px; /* Match font size to the menu links */
     font-weight: bold;
-    color: #1E1E1E;
+    color: #1E1E1E; /* Ensure consistent color */
 }
 
-/* Говер-ефект для посилань */
 .top-menu a:hover {
-    color: #595959;
-}
-
-/* Адаптивні стилі для мобільних пристроїв (екрани менше 768px) */
-@media (max-width: 768px) {
-    /* Менший розмір шрифтів для мобільних пристроїв */
-    .top-menu a {
-        font-size: 16px; /* Зменшуємо шрифт на мобільних */
-    }
-
-    .logo {
-        width: 40px; /* Менший логотип */
-    }
-
-    .logo-text {
-        font-size: 16px; /* Менший текст логотипу */
-    }
-
-    /* Меню буде розкладено вертикально */
-    .top-menu ul {
-        flex-direction: column;
-        align-items: flex-start; /* Вирівнюємо пункти меню по лівому краю */
-    }
-
-    /* Відстань між пунктами меню зменшується */
-    .top-menu li {
-        margin: 5px 0;
-    }
-
-    /* Додаємо відступи для меню */
-    .top-menu {
-        padding: 15px 0;
-    }
-
-    /* Зменшуємо ширину меню */
-    .top-menu ul {
-        width: 100%;
-    }
-}
-
-/* Для дуже малих екранів (екрани менше 480px) */
-@media (max-width: 480px) {
-    /* Зменшуємо шрифт і логотип ще більше */
-    .top-menu a {
-        font-size: 14px; /* Ще менший розмір шрифтів */
-    }
-
-    .logo {
-        width: 35px; /* Логотип ще менший */
-    }
-
-    .logo-text {
-        font-size: 14px; /* Текст логотипу також зменшується */
-    }
-
-    .top-menu ul {
-        padding-left: 0; /* Забираємо відступ зліва */
-    }
-
-    .top-menu li {
-        margin: 3px 0; /* Зменшуємо відстань між пунктами */
-    }
-
-    /* Зменшуємо відступи для маленьких екранів */
-    .top-menu {
-        padding: 10px 0;
-    }
+    color: #595959; /* Adjust hover effect */
 }
